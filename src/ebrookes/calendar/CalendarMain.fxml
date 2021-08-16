@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="1080.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ebrookes.calendar.Controller">
+<VBox prefHeight="1080.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ebrookes.calendar.CalendarMainController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -85,72 +85,72 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <VBox style="-fx-border-color: #ababab;" GridPane.rowIndex="1">
+                              <VBox fx:id="v00" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d00" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <VBox fx:id="v01" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d01" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <VBox fx:id="v02" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d02" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <VBox fx:id="v03" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d03" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                              <VBox fx:id="v04" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d04" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                              <VBox fx:id="v05" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d05" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                              <VBox fx:id="v06" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                  <children>
                                     <Label fx:id="d06" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.rowIndex="2">
+                              <VBox fx:id="v10" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d10" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <VBox fx:id="v11" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d11" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <VBox fx:id="v12" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d12" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <VBox fx:id="v13" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d13" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                              <VBox fx:id="v14" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d14" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                              <VBox fx:id="v15" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d15" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                              <VBox fx:id="v16" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                  <children>
                                     <Label fx:id="d16" text="Label" />
                                  </children>
@@ -242,142 +242,142 @@
                                     </VBox>
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.rowIndex="3">
+                              <VBox fx:id="v20" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d20" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <VBox fx:id="v21" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d21" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <VBox fx:id="v22" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d22" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <VBox fx:id="v23" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d23" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                              <VBox fx:id="v24" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d24" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                              <VBox fx:id="v26" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d26" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.rowIndex="4">
+                              <VBox fx:id="v30" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d30" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <VBox fx:id="v31" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d31" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <VBox fx:id="v32" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d32" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <VBox fx:id="v33" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d33" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                              <VBox fx:id="v34" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d34" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                              <VBox fx:id="v35" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d35" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                              <VBox fx:id="v36" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                  <children>
                                     <Label fx:id="d36" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.rowIndex="5">
+                              <VBox fx:id="v40" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d40" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <VBox fx:id="v41" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d41" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <VBox fx:id="v42" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d42" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                              <VBox fx:id="v43" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d43" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                              <VBox fx:id="v44" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d44" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                              <VBox fx:id="v45" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d45" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                              <VBox fx:id="v46" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                  <children>
                                     <Label fx:id="d46" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.rowIndex="6">
+                              <VBox fx:id="v50" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d50" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <VBox fx:id="v51" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d51" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                              <VBox fx:id="v52" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d52" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                              <VBox fx:id="v53" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d53" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                              <VBox fx:id="v54" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d54" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                              <VBox fx:id="v55" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d55" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                              <VBox fx:id="v56" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="6">
                                  <children>
                                     <Label fx:id="d56" text="Label" />
                                  </children>
                               </VBox>
-                              <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                              <VBox fx:id="v25" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                  <children>
                                     <Label fx:id="d25" text="Label" />
                                  </children>
