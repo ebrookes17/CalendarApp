@@ -1,3 +1,5 @@
+// Author: ebrookes
+
 package ebrookes.calendar;
 
 import javafx.scene.control.Label;
