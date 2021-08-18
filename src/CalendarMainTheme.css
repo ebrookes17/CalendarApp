@@ -1,0 +1,25 @@
+.menu-bar {
+    -fx-background-color: transparent;
+}
+.menu {
+    -fx-label-padding: 3px;
+}
+.menu .label, .menu-item .label {
+    -fx-text-fill: #ebebeb;
+}
+.menu:hover, .menu:pressed {
+    -fx-background-color: #2e2e2e;
+}
+.menu-item:hover {
+    -fx-background-color: #2e2e2e;
+}
+.context-menu {
+    -fx-background-color: #2e2e2e;
+    -fx-label-padding: 10px;
+}
+.menu-item:focused {
+   -fx-background-color : #363636;
+}
+#event {
+    -fx-text-fill: #ebebeb;
+}

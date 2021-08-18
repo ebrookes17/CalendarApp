@@ -19,7 +19,6 @@ public class Calendar {
 
     public Calendar() {
         setCurrentDate();
-
     }
 
     public Year getCurrentYear() {

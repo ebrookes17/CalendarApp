@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -17,9 +18,9 @@
 
 <VBox prefHeight="1080.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ebrookes.calendar.CalendarMainController">
   <children>
-    <MenuBar VBox.vgrow="NEVER">
+    <MenuBar style="-fx-background-color: #363636;" VBox.vgrow="NEVER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu mnemonicParsing="false" style="color: white;" text="File">
           <items>
             <MenuItem mnemonicParsing="false" text="New" />
             <MenuItem mnemonicParsing="false" text="Open…" />
@@ -56,7 +57,7 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #136e8a;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #2e2e2e;" VBox.vgrow="ALWAYS">
       <children>
             <BorderPane layoutX="241.0" layoutY="123.0" prefHeight="375.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <left>
@@ -85,92 +86,302 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <VBox fx:id="v00" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="1">
+                              <VBox fx:id="v00" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="1">
                                  <children>
-                                    <Label fx:id="d00" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v01" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="d01" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v02" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="d02" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v03" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="d03" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v04" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="d04" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v05" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="d05" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v06" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="d06" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v10" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d10" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v11" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d11" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v12" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d12" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v13" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d13" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v14" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d14" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v15" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d15" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox fx:id="v16" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="2">
-                                 <children>
-                                    <Label fx:id="d16" text="Label" />
-                                 </children>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
-                                 <children>
-                                    <Label text="Sun">
+                                    <Label fx:id="d00" text="Label" textFill="#ebebeb">
                                        <font>
-                                          <Font name="Segoe UI" size="24.0" />
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h00" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v01" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="d01" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h01" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v02" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="d02" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h02" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v03" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="d03" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h03" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v04" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="d04" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h04" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v05" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="d05" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h05" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v06" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="d06" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h06" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v10" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d10" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h10" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v11" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d11" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h11" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v12" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d12" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h12" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v13" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d13" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h13" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v14" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d14" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h14" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v15" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d15" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h15" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox fx:id="v16" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label fx:id="d16" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h16" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
+                                 <children>
+                                    <Label text="Sun" textFill="#ababab">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="24.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
                                        <children>
-                                          <Label text="Mon">
+                                          <Label text="Mon" textFill="#ebebeb">
                                              <font>
-                                                <Font name="Segoe UI" size="24.0" />
+                                                <Font name="Segoe UI Semibold" size="24.0" />
                                              </font>
                                           </Label>
                                        </children>
@@ -179,11 +390,11 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
                                        <children>
-                                          <Label text="Tue">
+                                          <Label text="Tue" textFill="#ebebeb">
                                              <font>
-                                                <Font name="Segoe UI" size="24.0" />
+                                                <Font name="Segoe UI Semibold" size="24.0" />
                                              </font>
                                           </Label>
                                        </children>
@@ -192,11 +403,11 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
                                        <children>
-                                          <Label text="Wed">
+                                          <Label text="Wed" textFill="#ebebeb">
                                              <font>
-                                                <Font name="Segoe UI" size="24.0" />
+                                                <Font name="Segoe UI Semibold" size="24.0" />
                                              </font>
                                           </Label>
                                        </children>
@@ -205,11 +416,11 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
                                        <children>
-                                          <Label text="Thu">
+                                          <Label text="Thu" textFill="#ebebeb">
                                              <font>
-                                                <Font name="Segoe UI" size="24.0" />
+                                                <Font name="Segoe UI Semibold" size="24.0" />
                                              </font>
                                           </Label>
                                        </children>
@@ -218,11 +429,11 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="5">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
                                        <children>
-                                          <Label text="Fri">
+                                          <Label text="Fri" textFill="#ebebeb">
                                              <font>
-                                                <Font name="Segoe UI" size="24.0" />
+                                                <Font name="Segoe UI Semibold" size="24.0" />
                                              </font>
                                           </Label>
                                        </children>
@@ -231,156 +442,576 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="6">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ababab;">
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #363636;">
                                        <children>
-                                          <Label text="Sat">
+                                          <Label text="Sat" textFill="#ababab">
                                              <font>
-                                                <Font name="Segoe UI" size="24.0" />
+                                                <Font name="Segoe UI Semibold" size="24.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
                                  </children>
                               </VBox>
-                              <VBox fx:id="v20" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="3">
+                              <VBox fx:id="v20" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d20" text="Label" />
+                                    <Label fx:id="d20" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h20" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v21" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <VBox fx:id="v21" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d21" text="Label" />
+                                    <Label fx:id="d21" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h21" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v22" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <VBox fx:id="v22" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d22" text="Label" />
+                                    <Label fx:id="d22" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h22" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v23" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <VBox fx:id="v23" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d23" text="Label" />
+                                    <Label fx:id="d23" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h23" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v24" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                              <VBox fx:id="v24" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d24" text="Label" />
+                                    <Label fx:id="d24" text="Label" textFill="#d4d4d4">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h24" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v26" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                              <VBox fx:id="v26" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d26" text="Label" />
+                                    <Label fx:id="d26" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h26" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v30" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="4">
+                              <VBox fx:id="v30" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d30" text="Label" />
+                                    <Label fx:id="d30" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h30" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v31" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <VBox fx:id="v31" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d31" text="Label" />
+                                    <Label fx:id="d31" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h31" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v32" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <VBox fx:id="v32" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d32" text="Label" />
+                                    <Label fx:id="d32" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h32" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v33" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <VBox fx:id="v33" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d33" text="Label" />
+                                    <Label fx:id="d33" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h33" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v34" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                              <VBox fx:id="v34" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d34" text="Label" />
+                                    <Label fx:id="d34" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h34" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v35" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                              <VBox fx:id="v35" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d35" text="Label" />
+                                    <Label fx:id="d35" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h35" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v36" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                              <VBox fx:id="v36" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                  <children>
-                                    <Label fx:id="d36" text="Label" />
+                                    <Label fx:id="d36" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h36" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v40" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="5">
+                              <VBox fx:id="v40" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d40" text="Label" />
+                                    <Label fx:id="d40" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h40" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v41" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <VBox fx:id="v41" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d41" text="Label" />
+                                    <Label fx:id="d41" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h41" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v42" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <VBox fx:id="v42" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d42" text="Label" />
+                                    <Label fx:id="d42" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h42" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v43" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                              <VBox fx:id="v43" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d43" text="Label" />
+                                    <Label fx:id="d43" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h43" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v44" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                              <VBox fx:id="v44" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d44" text="Label" />
+                                    <Label fx:id="d44" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h44" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v45" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                              <VBox fx:id="v45" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d45" text="Label" />
+                                    <Label fx:id="d45" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h45" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v46" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                              <VBox fx:id="v46" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                  <children>
-                                    <Label fx:id="d46" text="Label" />
+                                    <Label fx:id="d46" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h46" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v50" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.rowIndex="6">
+                              <VBox fx:id="v50" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d50" text="Label" />
+                                    <Label fx:id="d50" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h50" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v51" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <VBox fx:id="v51" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d51" text="Label" />
+                                    <Label fx:id="d51" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h51" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v52" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                              <VBox fx:id="v52" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d52" text="Label" />
+                                    <Label fx:id="d52" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h52" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v53" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                              <VBox fx:id="v53" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d53" text="Label" />
+                                    <Label fx:id="d53" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h53" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v54" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                              <VBox fx:id="v54" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d54" text="Label" />
+                                    <Label fx:id="d54" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h54" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v55" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                              <VBox fx:id="v55" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d55" text="Label" />
+                                    <Label fx:id="d55" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h55" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v56" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab; -fx-background-color: #e3e3e3;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                              <VBox fx:id="v56" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="6">
                                  <children>
-                                    <Label fx:id="d56" text="Label" />
+                                    <Label fx:id="d56" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h56" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
-                              <VBox fx:id="v25" prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: #ababab;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                              <VBox fx:id="v25" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                  <children>
-                                    <Label fx:id="d25" text="Label" />
+                                    <Label fx:id="d25" text="Label" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Bold" size="14.0" />
+                                       </font></Label>
+                                    <HBox alignment="CENTER_RIGHT" style="-fx-background-color: rgba(255,0,0,0.2);" visible="false">
+                                       <children>
+                                          <Label fx:id="h25" text="Label" textFill="#ebebeb">
+                                             <font>
+                                                <Font name="Segoe UI Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
                                  </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </VBox>
                            </children>
                         </GridPane>
@@ -393,28 +1024,62 @@
                <top>
                   <AnchorPane prefHeight="195.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                      <children>
-                        <HBox alignment="CENTER" layoutX="460.0" layoutY="64.0" prefHeight="68.0" prefWidth="520.0" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="460.0">
+                        <HBox alignment="CENTER" layoutX="410.0" layoutY="64.0" AnchorPane.leftAnchor="410.0" AnchorPane.rightAnchor="410.0">
                            <children>
-                              <Button fx:id="prevMonthButton" mnemonicParsing="false" style="-fx-background-color: none;" text="&lt;" textFill="#ababab">
-                                 <font>
-                                    <Font name="Calibri Bold" size="36.0" />
-                                 </font>
-                              </Button>
-                              <Label fx:id="viewingMonthLabel" alignment="CENTER" text="August" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font name="Segoe UI Bold" size="36.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="viewingYearLabel" alignment="CENTER" layoutX="155.0" layoutY="24.0" text=" 2021" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font name="Segoe UI Bold" size="36.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="nextMonthButton" mnemonicParsing="false" style="-fx-background-color: none;" text="&gt;" textFill="#ababab">
-                                 <font>
-                                    <Font name="Calibri Bold" size="36.0" />
-                                 </font>
-                              </Button>
+                              <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="68.0" prefWidth="150.0">
+                                 <children>
+                                    <Button fx:id="prevYearButton" layoutX="11.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: none;" text="&lt;&lt;" textFill="#ababab">
+                                       <font>
+                                          <Font name="Calibri Bold" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="prevMonthButton" mnemonicParsing="false" style="-fx-background-color: none;" text="&lt;" textFill="#ababab">
+                                       <font>
+                                          <Font name="Calibri Bold" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="68.0" prefWidth="320.0">
+                                 <children>
+                                    <Label fx:id="viewingMonthLabel" alignment="CENTER" minWidth="-Infinity" text="August" textAlignment="CENTER" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="viewingYearLabel" alignment="CENTER" layoutX="155.0" layoutY="24.0" minWidth="-Infinity" text=" 2021" textAlignment="CENTER" textFill="#ebebeb">
+                                       <font>
+                                          <Font name="Segoe UI Semibold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" minWidth="-Infinity" prefHeight="68.0" prefWidth="150.0">
+                                 <children>
+                                    <Button fx:id="nextMonthButton" mnemonicParsing="false" style="-fx-background-color: none;" text="&gt;" textFill="#ababab" HBox.hgrow="NEVER">
+                                       <font>
+                                          <Font name="Calibri Bold" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="nextYearButton" layoutX="10.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: none;" text="&gt;&gt;" textFill="#ababab">
+                                       <font>
+                                          <Font name="Calibri Bold" size="36.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
                      </children>
