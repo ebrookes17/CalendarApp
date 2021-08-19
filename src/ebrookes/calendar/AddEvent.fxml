@@ -26,8 +26,6 @@
                <font>
                   <Font name="Segoe UI Semibold" size="14.0" />
                </font></Label>
-            <TextField fx:id="eventStartInput" layoutX="166.0" layoutY="99.0" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #e3e3e3;" />
-            <TextField fx:id="eventEndInput" layoutX="167.0" layoutY="137.0" prefHeight="25.0" prefWidth="122.0" style="-fx-background-color: #e3e3e3;" />
             <Label layoutX="118.0" layoutY="185.0" text="Color:   " textFill="#ebebeb">
                <font>
                   <Font name="Segoe UI Semibold" size="14.0" />
@@ -37,13 +35,27 @@
                <font>
                   <Font name="Segoe UI Semibold" size="14.0" />
                </font></Button>
-            <Button fx:id="cancelButton" layoutX="182.0" layoutY="239.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Cancel">
+            <Button fx:id="cancelButton" layoutX="167.0" layoutY="239.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Cancel">
                <font>
                   <Font name="Segoe UI Semibold" size="14.0" />
                </font></Button>
             <ChoiceBox fx:id="colorSelection" layoutX="167.0" layoutY="181.0" prefHeight="25.0" prefWidth="122.0" />
-            <ChoiceBox fx:id="startAmPm" layoutX="296.0" layoutY="99.0" prefHeight="25.0" prefWidth="55.0" />
-            <ChoiceBox fx:id="endAmPm" layoutX="296.0" layoutY="137.0" prefHeight="25.0" prefWidth="55.0" />
+            <ChoiceBox fx:id="startAmPm" layoutX="296.0" layoutY="101.0" prefHeight="25.0" prefWidth="55.0" />
+            <ChoiceBox fx:id="endAmPm" layoutX="296.0" layoutY="139.0" prefHeight="25.0" prefWidth="55.0" />
+            <ChoiceBox fx:id="startHour" layoutX="167.0" layoutY="101.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="220.0" layoutY="104.0" text=" : " textFill="#ebebeb">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="startMinute" layoutX="234.0" layoutY="101.0" maxWidth="200.0" prefHeight="25.0" prefWidth="55.0" />
+            <ChoiceBox fx:id="endHour" layoutX="167.0" layoutY="139.0" prefHeight="25.0" prefWidth="50.0" />
+            <Label layoutX="220.0" layoutY="142.0" text=" : " textFill="#ebebeb">
+               <font>
+                  <Font name="Segoe UI Semibold" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="endMinute" layoutX="234.0" layoutY="139.0" maxWidth="200.0" prefHeight="25.0" prefWidth="55.0" />
          </children>
     </AnchorPane>
   </children>

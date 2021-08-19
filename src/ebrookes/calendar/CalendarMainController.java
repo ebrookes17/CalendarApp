@@ -7,6 +7,8 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.geometry.Side;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,7 +16,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -22,12 +25,11 @@ import java.net.URL;
 import java.time.Month;
 import java.time.Year;
 import java.time.format.TextStyle;
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class CalendarMainController implements Initializable {
 
-    private Scene scene;
+    private AddEventController addEventController;
     static Stage stage;
 
     // Buttons
@@ -58,10 +60,12 @@ public class CalendarMainController implements Initializable {
     Year viewingYear;
     Month viewingMonth;
     int eventIndex;
-
+    HashMap<HBox, Integer> eventList;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        eventList = new HashMap<>();
 
         // stage = Main.getStage();
 
@@ -109,15 +113,8 @@ public class CalendarMainController implements Initializable {
         MenuItem menuItem1 = new MenuItem("Add Event");
         contextMenu.getItems().addAll(menuItem1);
 
-
         BooleanProperty b = new SimpleBooleanProperty(false);
-
-        b.addListener((observable, oldvalue, newvalue) -> {
-            if (newvalue) {
-                createNewEvent(AddEventController.getEventDetails(), daySlots);
-                AddEventController.setCheck(false);
-            }
-        });
+        //b.bind(addEventController.getCheck());
 
         for (int i = 0; i < daySlots.length; i++) {
             int finalI = i;
@@ -129,18 +126,33 @@ public class CalendarMainController implements Initializable {
 
                 contextMenu.show(daySlots[finalI], Side.RIGHT, -100, 60);
 
-                menuItem1.setOnAction(ev -> openAddEvent());
+                menuItem1.setOnAction(ev -> {
 
-                if (AddEventController.getEventDetails() != null) {
-                    b.setValue(AddEventController.getCheck().getValue());
-                }
+                    addEventController = openAddEvent();
+
+                    if (addEventController.getEventDetails() != null) {
+                        if (addEventController.getCheck().getValue())
+                            b.setValue(true);
+                    }
+                    b.setValue(false);
+
+
+                });
+
 
                 clearHolidays(holidayLabels);
                 addHolidays(dayLabels, holidayLabels);
             });
         }
 
-        //nextMonthButton.setOnMouseEntered(e -> nextMonthButton.setStyle("-fx-background-color: yellow;"));
+
+        b.addListener((observable, oldvalue, newvalue) -> {
+            if (newvalue) {
+                createNewEvent(addEventController.getEventDetails(), daySlots);
+                addEventController.setCheck(false);
+            }
+        });
+
 
         addHolidays(dayLabels, holidayLabels);
     }
@@ -267,28 +279,56 @@ public class CalendarMainController implements Initializable {
         }
 
     }
-
-    private void openAddEvent() {
-        Stage window = new Stage();
+    private AddEventController openAddEvent() {
+        Stage stage = new Stage();
         Parent root = null;
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("AddEvent.fxml"));
+
         try {
-            root = FXMLLoader.load(getClass().getResource("AddEvent.fxml"));
+            root = loader.load();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        window.setScene(new Scene(root, 540, 300));
-        window.setTitle("Add Event");
+        Scene scene = new Scene(root, 540, 300);
+        stage.setScene(scene);
+
+        scene.getStylesheets().add("AddEventTheme.css");
+
+        stage.setTitle("Add Event");
 
         // block interaction with other windows
-        window.initModality(Modality.APPLICATION_MODAL);
-        window.showAndWait();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
 
+        return loader.getController();
     }
 
     private void createNewEvent(Object[] eventDetails, VBox[] daySlots) {
-        Label label = new Label((String)eventDetails[0]);
-        label.setId("event");
-        daySlots[eventIndex].getChildren().add(label);
+
+        HBox hBox = new HBox();
+
+        Label nameLabel = new Label(eventDetails[0].toString());
+        Label timeLabel = new Label((String) eventDetails[1] + eventDetails [2] + " - " +
+                eventDetails[3] + eventDetails [4]);
+
+        nameLabel.setId("name-label");
+        timeLabel.setId("time-label");
+        hBox.setId("event-label");
+
+        nameLabel.setTextAlignment(TextAlignment.RIGHT);
+        Region region = new Region();
+
+        hBox.setHgrow(region, Priority.ALWAYS);
+
+        hBox.setStyle("-fx-background-color:" + eventDetails[5]);
+
+        hBox.getChildren().addAll(timeLabel, region, nameLabel);
+        hBox.setPadding(new Insets(1));
+
+        daySlots[eventIndex].getChildren().add(hBox);
+
+        eventList.put(hBox, eventIndex);
     }
 
 
