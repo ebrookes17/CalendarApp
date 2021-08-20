@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.geometry.Side;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -30,7 +29,7 @@ import java.util.*;
 public class CalendarMainController implements Initializable {
 
     private AddEventController addEventController;
-    static Stage stage;
+    public static Stage stage;
 
     // Buttons
     @FXML
@@ -57,17 +56,18 @@ public class CalendarMainController implements Initializable {
     VBox v00, v01, v02, v03, v04, v05, v06, v10, v11, v12, v13, v14, v15, v16, v20, v21, v22, v23, v24, v25, v26,
             v30, v31, v32, v33, v34, v35, v36, v40, v41, v42, v43, v44, v45, v46, v50, v51, v52, v53, v54, v55, v56;
 
+    @FXML
+    Button lightModeButton;
+
     Year viewingYear;
     Month viewingMonth;
     int eventIndex;
-    HashMap<HBox, Integer> eventList;
+    List<Object[]> customEvents;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        eventList = new HashMap<>();
-
-        // stage = Main.getStage();
+        customEvents = new ArrayList<>();
 
         // Populate dayLabels array
         Label[] dayLabels = {
@@ -97,24 +97,22 @@ public class CalendarMainController implements Initializable {
         calendar.genDayLabels(dayLabels, viewingYear, viewingMonth);
 
         // Assign previous month button functionality
-        assignPrevMonthButtonFunc(calendar, dayLabels, holidayLabels);
+        assignPrevMonthButtonFunc(calendar, dayLabels, holidayLabels, daySlots);
 
         // Assign next month button functionality
-        assignNextMonthButtonFunc(calendar, dayLabels, holidayLabels);
+        assignNextMonthButtonFunc(calendar, dayLabels, holidayLabels, daySlots);
 
         // Assign previous year button functionality
-        assignPrevYearButtonFunc(calendar, dayLabels, holidayLabels);
+        assignPrevYearButtonFunc(calendar, dayLabels, holidayLabels, daySlots);
 
         // Assign next year button functionality
-        assignNextYearButtonFunc(calendar, dayLabels, holidayLabels);
-
+        assignNextYearButtonFunc(calendar, dayLabels, holidayLabels, daySlots);
 
         ContextMenu contextMenu = new ContextMenu();
         MenuItem menuItem1 = new MenuItem("Add Event");
         contextMenu.getItems().addAll(menuItem1);
 
         BooleanProperty b = new SimpleBooleanProperty(false);
-        //b.bind(addEventController.getCheck());
 
         for (int i = 0; i < daySlots.length; i++) {
             int finalI = i;
@@ -148,13 +146,21 @@ public class CalendarMainController implements Initializable {
 
         b.addListener((observable, oldvalue, newvalue) -> {
             if (newvalue) {
-                createNewEvent(addEventController.getEventDetails(), daySlots);
+                createNewEvent(addEventController.getEventDetails(), daySlots, dayLabels);
                 addEventController.setCheck(false);
             }
         });
 
 
         addHolidays(dayLabels, holidayLabels);
+        addCustomEvents(daySlots, dayLabels);
+
+        lightModeButton.setOnAction(e -> {
+            Scene scene = lightModeButton.getScene();
+            scene.getStylesheets().remove("CalendarMainThemeDark.css");
+            scene.getStylesheets().add("CalendarMainThemeLight.css");
+
+        });
     }
 
     private void displayViewingYearAndMonth(Calendar calendar) {
@@ -165,7 +171,7 @@ public class CalendarMainController implements Initializable {
         viewingYearLabel.setText(" " + viewingYear);
     }
 
-    private void assignPrevMonthButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels) {
+    private void assignPrevMonthButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels, VBox[] daySlots) {
         prevMonthButton.setOnAction(e -> {
             viewingMonth = viewingMonth.minus(1);
             if (viewingMonth == Month.DECEMBER)
@@ -176,10 +182,12 @@ public class CalendarMainController implements Initializable {
             System.out.println("Prev month button clicked");
 
             generateHolidaysForMonth(dayLabels, holidayLabels);
+
+            generateCustomEventsForMonth(daySlots, dayLabels);
         });
     }
 
-    private void assignNextMonthButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels) {
+    private void assignNextMonthButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels, VBox[] daySlots) {
         nextMonthButton.setOnAction(e -> {
             viewingMonth = viewingMonth.plus(1);
             if (viewingMonth == Month.JANUARY)
@@ -190,10 +198,12 @@ public class CalendarMainController implements Initializable {
             System.out.println("Next month button clicked");
 
             generateHolidaysForMonth(dayLabels, holidayLabels);
+
+            generateCustomEventsForMonth(daySlots, dayLabels);
         });
     }
 
-    private void assignPrevYearButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels) {
+    private void assignPrevYearButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels, VBox[] daySlots) {
         prevYearButton.setOnAction(e -> {
             viewingYear = viewingYear.minusYears(1);
             calendar.genDayLabels(dayLabels, viewingYear, viewingMonth);
@@ -202,10 +212,12 @@ public class CalendarMainController implements Initializable {
             System.out.println("Prev year button clicked");
 
             generateHolidaysForMonth(dayLabels, holidayLabels);
+
+            generateCustomEventsForMonth(daySlots, dayLabels);
         });
     }
 
-    private void assignNextYearButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels) {
+    private void assignNextYearButtonFunc(Calendar calendar, Label[] dayLabels, Label[] holidayLabels, VBox[] daySlots) {
         nextYearButton.setOnAction(e -> {
             viewingYear = viewingYear.plusYears(1);
             calendar.genDayLabels(dayLabels, viewingYear, viewingMonth);
@@ -214,10 +226,13 @@ public class CalendarMainController implements Initializable {
             System.out.println("Next year button clicked");
 
             generateHolidaysForMonth(dayLabels, holidayLabels);
+
+            generateCustomEventsForMonth(daySlots, dayLabels);
         });
     }
 
     private void generateHolidaysForMonth(Label[] dayLabels, Label[] holidayLabels) {
+
         clearHolidays(holidayLabels);
         addHolidays(dayLabels, holidayLabels);
     }
@@ -304,7 +319,7 @@ public class CalendarMainController implements Initializable {
         return loader.getController();
     }
 
-    private void createNewEvent(Object[] eventDetails, VBox[] daySlots) {
+    private void createNewEvent(Object[] eventDetails, VBox[] daySlots, Label[] dayLabels) {
 
         HBox hBox = new HBox();
 
@@ -326,10 +341,94 @@ public class CalendarMainController implements Initializable {
         hBox.getChildren().addAll(timeLabel, region, nameLabel);
         hBox.setPadding(new Insets(1));
 
+        Object[] objects = new Object[6];
+
+        objects[0] = viewingYear;
+        objects[1] = viewingMonth;
+        objects[2] = dayLabels[eventIndex].getText();
+        objects[3] = eventIndex;
+        objects[4] = hBox;
+        objects[5] = dayLabels[eventIndex].isDisabled();
+
         daySlots[eventIndex].getChildren().add(hBox);
 
-        eventList.put(hBox, eventIndex);
+        customEvents.add(objects);
+
+    }
+    private void addCustomEvents(VBox[] daySlots, Label[] dayLabels) {
+
+        for (int i = 0; i < customEvents.size(); i++) {
+
+            System.out.println(
+            customEvents.get(i)[0] + "," +
+                    customEvents.get(i)[1] + "," +
+                    customEvents.get(i)[2] + "," +
+                    customEvents.get(i)[3] + "," );
+
+            // Add event normally
+            if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && viewingMonth == customEvents.get(i)[1]) {
+                daySlots[(int) customEvents.get(i)[3]].getChildren().add((HBox)customEvents.get(i)[4]);
+            }
+
+            //if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String)customEvents.get(i)[2]) < 15 && viewingMonth.minus(1) == customEvents.get(i)[1]) {
+
+
+
+            //if ((boolean) customEvents.get(i)[5]) {
+
+                System.out.println(customEvents.get(i)[2]);
+                // If day label is day in next month
+                if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String)customEvents.get(i)[2]) < 15 && viewingMonth.minus(1) == customEvents.get(i)[1]) {
+
+                    for (int j = 0; j < 15; j++) {
+                        if (dayLabels[j].getText().equals((String)customEvents.get(i)[2]))
+                            daySlots[j].getChildren().add((HBox)customEvents.get(i)[4]);
+                    }
+
+                }
+                // Else if day label is day in previous month
+                else if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String)customEvents.get(i)[2]) > 15 && viewingMonth.plus(1) == customEvents.get(i)[1]) {
+
+                    for (int j = dayLabels.length - 15; j < dayLabels.length; j++) {
+                        if (dayLabels[j].getText().equals((String)customEvents.get(i)[2]))
+                            daySlots[j].getChildren().add((HBox)customEvents.get(i)[4]);
+                    }
+
+                }
+
+            //}
+            /* WIP - DEALING WITH EVENTS ADDED TO DAYS OUTSIDE OF CURRENT MONTH
+            if (dayLabels[i].isDisabled()) {
+
+                // If day label is day in next month
+                if (Integer.parseInt(dayLabels[i].getText()) < 15 && viewingMonth.minus(1) == customEvents.get(i)[1]) {
+
+
+
+                }
+                // If day label is day in previous month
+                else if (Integer.parseInt(dayLabels[eventIndex].getText()) > 15) {
+
+                }
+            }
+
+             */
+        }
     }
 
+    private void clearCustomEvents(VBox[] daySlots) {
+
+        for (int i = 0; i < daySlots.length; i++) {
+
+            while (daySlots[i].getChildren().contains(daySlots[i].lookup("#event-label")))
+                daySlots[i].getChildren().remove(daySlots[i].lookup("#event-label"));
+        }
+    }
+
+    private void generateCustomEventsForMonth(VBox[] dayslots, Label[] dayLabels) {
+
+        clearCustomEvents(dayslots);
+        addCustomEvents(dayslots, dayLabels);
+    }
 
 }

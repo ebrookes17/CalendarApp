@@ -19,7 +19,7 @@
 
 <VBox prefHeight="1080.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ebrookes.calendar.CalendarMainController">
   <children>
-    <MenuBar style="-fx-background-color: #363636;" VBox.vgrow="NEVER">
+    <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" style="color: white;" text="File">
           <items>
@@ -58,7 +58,7 @@
         </Menu>
       </menus>
     </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #2e2e2e;" VBox.vgrow="ALWAYS">
+    <AnchorPane id="main-anchorpane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
             <BorderPane layoutX="241.0" layoutY="123.0" prefHeight="375.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <left>
@@ -67,7 +67,7 @@
                <center>
                   <AnchorPane BorderPane.alignment="CENTER">
                      <children>
-                        <GridPane layoutY="62.0" prefHeight="860.0" prefWidth="1050.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <GridPane layoutY="62.0" prefHeight="860.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -87,9 +87,9 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v00" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v00">
                                        <children>
                                           <Label fx:id="d00" text="Label" textFill="#ebebeb">
                                              <font>
@@ -112,9 +112,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v01" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v01">
                                        <children>
                                           <Label fx:id="d01" text="Label" textFill="#ebebeb">
                                              <font>
@@ -137,9 +137,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v02" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v02">
                                        <children>
                                           <Label fx:id="d02" text="Label" textFill="#ebebeb">
                                              <font>
@@ -162,9 +162,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v03" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v03">
                                        <children>
                                           <Label fx:id="d03" text="Label" textFill="#ebebeb">
                                              <font>
@@ -187,9 +187,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v04" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v04">
                                        <children>
                                           <Label fx:id="d04" text="Label" textFill="#ebebeb">
                                              <font>
@@ -212,9 +212,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v05" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v05">
                                        <children>
                                           <Label fx:id="d05" text="Label" textFill="#ebebeb">
                                              <font>
@@ -237,9 +237,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="1">
                                  <content>
-                                    <VBox fx:id="v06" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v06">
                                        <children>
                                           <Label fx:id="d06" text="Label" textFill="#ebebeb">
                                              <font>
@@ -262,9 +262,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v10" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v10">
                                        <children>
                                           <Label fx:id="d10" text="Label" textFill="#ebebeb">
                                              <font>
@@ -287,9 +287,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v11" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v11">
                                        <children>
                                           <Label fx:id="d11" text="Label" textFill="#ebebeb">
                                              <font>
@@ -312,9 +312,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v12" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v12">
                                        <children>
                                           <Label fx:id="d12" text="Label" textFill="#ebebeb">
                                              <font>
@@ -337,9 +337,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v13" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v13">
                                        <children>
                                           <Label fx:id="d13" text="Label" textFill="#ebebeb">
                                              <font>
@@ -362,9 +362,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v14" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v14">
                                        <children>
                                           <Label fx:id="d14" text="Label" textFill="#ebebeb">
                                              <font>
@@ -387,9 +387,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v15" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v15">
                                        <children>
                                           <Label fx:id="d15" text="Label" textFill="#ebebeb">
                                              <font>
@@ -412,9 +412,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="2">
                                  <content>
-                                    <VBox fx:id="v16" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v16">
                                        <children>
                                           <Label fx:id="d16" text="Label" textFill="#ebebeb">
                                              <font>
@@ -524,9 +524,9 @@
                                     </VBox>
                                  </children>
                               </VBox>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v20" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v20">
                                        <children>
                                           <Label fx:id="d20" text="Label" textFill="#ebebeb">
                                              <font>
@@ -549,9 +549,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v21" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v21">
                                        <children>
                                           <Label fx:id="d21" text="Label" textFill="#ebebeb">
                                              <font>
@@ -574,9 +574,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v22" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v22">
                                        <children>
                                           <Label fx:id="d22" text="Label" textFill="#ebebeb">
                                              <font>
@@ -599,9 +599,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v23" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v23">
                                        <children>
                                           <Label fx:id="d23" text="Label" textFill="#ebebeb">
                                              <font>
@@ -624,9 +624,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v24" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v24">
                                        <children>
                                           <Label fx:id="d24" text="Label" textFill="#d4d4d4">
                                              <font>
@@ -649,9 +649,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v26" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v26">
                                        <children>
                                           <Label fx:id="d26" text="Label" textFill="#ebebeb">
                                              <font>
@@ -674,9 +674,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v30" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v30">
                                        <children>
                                           <Label fx:id="d30" text="Label" textFill="#ebebeb">
                                              <font>
@@ -699,9 +699,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v31" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v31">
                                        <children>
                                           <Label fx:id="d31" text="Label" textFill="#ebebeb">
                                              <font>
@@ -724,9 +724,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v32" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v32">
                                        <children>
                                           <Label fx:id="d32" text="Label" textFill="#ebebeb">
                                              <font>
@@ -749,9 +749,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v33" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v33">
                                        <children>
                                           <Label fx:id="d33" text="Label" textFill="#ebebeb">
                                              <font>
@@ -774,9 +774,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v34" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v34">
                                        <children>
                                           <Label fx:id="d34" text="Label" textFill="#ebebeb">
                                              <font>
@@ -799,9 +799,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v35" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v35">
                                        <children>
                                           <Label fx:id="d35" text="Label" textFill="#ebebeb">
                                              <font>
@@ -824,9 +824,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="4">
                                  <content>
-                                    <VBox fx:id="v36" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v36">
                                        <children>
                                           <Label fx:id="d36" text="Label" textFill="#ebebeb">
                                              <font>
@@ -849,9 +849,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v40" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v40">
                                        <children>
                                           <Label fx:id="d40" text="Label" textFill="#ebebeb">
                                              <font>
@@ -874,9 +874,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v41" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v41">
                                        <children>
                                           <Label fx:id="d41" text="Label" textFill="#ebebeb">
                                              <font>
@@ -899,9 +899,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v42" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v42">
                                        <children>
                                           <Label fx:id="d42" text="Label" textFill="#ebebeb">
                                              <font>
@@ -924,9 +924,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v43" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v43">
                                        <children>
                                           <Label fx:id="d43" text="Label" textFill="#ebebeb">
                                              <font>
@@ -949,9 +949,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v44" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v44">
                                        <children>
                                           <Label fx:id="d44" text="Label" textFill="#ebebeb">
                                              <font>
@@ -974,9 +974,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v45" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v45">
                                        <children>
                                           <Label fx:id="d45" text="Label" textFill="#ebebeb">
                                              <font>
@@ -999,9 +999,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="5">
                                  <content>
-                                    <VBox fx:id="v46" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v46">
                                        <children>
                                           <Label fx:id="d46" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1024,9 +1024,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v50" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v50">
                                        <children>
                                           <Label fx:id="d50" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1049,9 +1049,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v51" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v51">
                                        <children>
                                           <Label fx:id="d51" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1074,9 +1074,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v52" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v52">
                                        <children>
                                           <Label fx:id="d52" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1099,9 +1099,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v53" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v53">
                                        <children>
                                           <Label fx:id="d53" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1124,9 +1124,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v54" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v54">
                                        <children>
                                           <Label fx:id="d54" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1149,9 +1149,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v55" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v55">
                                        <children>
                                           <Label fx:id="d55" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1174,9 +1174,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="6">
                                  <content>
-                                    <VBox fx:id="v56" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v56">
                                        <children>
                                           <Label fx:id="d56" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1199,9 +1199,9 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane style="-fx-fit-to-height: true; -fx-fit-to-width: true; -fx-background-color: #2e2e2e; -fx-border-color: #363636;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="3">
                                  <content>
-                                    <VBox fx:id="v25" style="-fx-background-color: #2e2e2e;">
+                                    <VBox fx:id="v25">
                                        <children>
                                           <Label fx:id="d25" text="Label" textFill="#ebebeb">
                                              <font>
@@ -1293,6 +1293,7 @@
                               </HBox>
                            </children>
                         </HBox>
+                        <Button fx:id="lightModeButton" layoutX="99.0" layoutY="98.0" mnemonicParsing="false" text="Light Mode" />
                      </children>
                   </AnchorPane>
                </top>

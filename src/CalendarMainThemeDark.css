@@ -1,0 +1,83 @@
+#main-anchorpane {
+    -fx-background-color: #2e2e2e;
+}
+.menu-bar {
+    -fx-background-color: #363636;
+}
+ScrollPane {
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-background-color: #2e2e2e;
+    -fx-border-color: #363636;
+}
+VBox {
+    -fx-background-color: #2e2e2e;
+}
+
+.menu {
+    -fx-label-padding: 3px;
+}
+.menu .label, .menu-item .label {
+    -fx-text-fill: #ebebeb;
+}
+.menu:hover, .menu:pressed {
+    -fx-background-color: #2e2e2e;
+}
+.menu-item:hover {
+    -fx-background-color: #2e2e2e;
+}
+.context-menu {
+    -fx-background-color: #2e2e2e;
+    -fx-label-padding: 10px;
+}
+.menu-item:focused {
+    -fx-background-color : #363636;
+}
+#event-label {
+    -fx-font-size: 14px;
+    -fx-border-color: #2e2e2e;
+}
+#name-label {
+    -fx-text-fill: white;
+}
+#time-label {
+    -fx-text-fill: #ebebeb;
+    -fx-font-weight: bold;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color : #2e2e2e;
+    -fx-border-color : #2e2e2e;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 5.0 0.0 0.0;
+
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.05em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 1.0, 0.0, 0.0;
+    -fx-background-radius : 0.5em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 1.0, 0.0, 0.0;
+    -fx-background-radius : 0.5em;
+}
+
+

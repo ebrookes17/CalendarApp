@@ -19,7 +19,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("CalendarMain.fxml"));
         stage.setTitle("Calendar");
         Scene scene = new Scene(root, 1920, 1080);
-        scene.getStylesheets().add("CalendarMainTheme.css");
+        scene.getStylesheets().add("CalendarMainThemeDark.css");
         stage.setScene(scene);
         stage.show();
     }
@@ -27,8 +27,5 @@ public class Main extends Application {
     public static void main(String[] args) {
 
         launch(args);
-    }
-    public static Stage getStage() {
-        return stage;
     }
 }

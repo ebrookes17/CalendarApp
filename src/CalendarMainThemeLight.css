@@ -1,6 +1,19 @@
-.menu-bar {
-    -fx-background-color: transparent;
+#main-anchorpane {
+    -fx-background-color: #d4d4d4;
 }
+.menu-bar {
+    -fx-background-color: #b3b3b3;
+}
+ScrollPane {
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-background-color: #d4d4d4;
+    -fx-border-color: #b3b3b3;
+}
+VBox {
+    -fx-background-color: #d4d4d4;
+}
+
 .menu {
     -fx-label-padding: 3px;
 }
