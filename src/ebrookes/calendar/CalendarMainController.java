@@ -57,7 +57,7 @@ public class CalendarMainController implements Initializable {
             v30, v31, v32, v33, v34, v35, v36, v40, v41, v42, v43, v44, v45, v46, v50, v51, v52, v53, v54, v55, v56;
 
     @FXML
-    Button lightModeButton;
+    Button lightModeButton, darkModeButton;
 
     Year viewingYear;
     Month viewingMonth;
@@ -157,9 +157,14 @@ public class CalendarMainController implements Initializable {
 
         lightModeButton.setOnAction(e -> {
             Scene scene = lightModeButton.getScene();
-            scene.getStylesheets().remove("CalendarMainThemeDark.css");
+            scene.getStylesheets().removeAll("CalendarMainThemeDark.css");
             scene.getStylesheets().add("CalendarMainThemeLight.css");
 
+        });
+        darkModeButton.setOnAction(e -> {
+            Scene scene = darkModeButton.getScene();
+            scene.getStylesheets().removeAll("CalendarMainThemeLight.css");
+            scene.getStylesheets().add("CalendarMainThemeDark.css");
         });
     }
 

@@ -1,19 +1,33 @@
 #main-anchorpane {
-    -fx-background-color: #d4d4d4;
+    -fx-background-color: white;
 }
 .menu-bar {
-    -fx-background-color: #b3b3b3;
+    -fx-background-color: #d4d4d4;
 }
 ScrollPane {
     -fx-fit-to-height: true;
     -fx-fit-to-width: true;
-    -fx-background-color: #d4d4d4;
-    -fx-border-color: #b3b3b3;
+    -fx-background-color: white;
+    -fx-border-color: #d4d4d4;
 }
 VBox {
-    -fx-background-color: #d4d4d4;
+    -fx-background-color: white;
 }
-
+#weekday-header {
+    -fx-background-color:  #d4d4d4;
+}
+#weekday-header Label {
+    -fx-text-fill: black;
+}
+#weekend-header {
+    -fx-background-color: #e6e6e6;
+}
+#weekend-header Label {
+    -fx-text-fill: #525252;
+}
+#date Label {
+    -fx-text-fill: black;
+}
 .menu {
     -fx-label-padding: 3px;
 }
@@ -35,7 +49,7 @@ VBox {
 }
 #event-label {
     -fx-font-size: 14px;
-    -fx-border-color: #2e2e2e;
+    -fx-border-color: white;
 }
 #name-label {
     -fx-text-fill: white;

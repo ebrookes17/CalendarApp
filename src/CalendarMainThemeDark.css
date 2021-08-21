@@ -13,6 +13,21 @@ ScrollPane {
 VBox {
     -fx-background-color: #2e2e2e;
 }
+#weekday-header {
+    -fx-background-color:  #363636;
+}
+#weekday-header Label {
+    -fx-text-fill: white;
+}
+#weekend-header {
+    -fx-background-color: #363636;
+}
+#weekend-header Label {
+    -fx-text-fill: #d4d4d4;
+}
+#date Label {
+    -fx-text-fill: #ebebeb;
+}
 
 .menu {
     -fx-label-padding: 3px;
