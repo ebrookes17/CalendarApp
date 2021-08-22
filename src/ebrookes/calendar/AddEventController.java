@@ -6,7 +6,6 @@ import javafx.beans.property.SimpleBooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
@@ -18,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class AddEventController implements Initializable {
 
-    Stage window;
+    Stage stage;
 
     Object[] eventDetails;
 
@@ -42,10 +41,10 @@ public class AddEventController implements Initializable {
 
         eventNameInput.setPromptText("Doctor's Appointment");
 
-        startHour.getItems().addAll(Calendar.getStartHours());
+        startHour.getItems().addAll(Calendar.getEventHours());
         startHour.setValue("8");
 
-        startMinute.getItems().addAll(Calendar.getStartMinutes());
+        startMinute.getItems().addAll(Calendar.getEventMinutes());
         startMinute.setValue("00");
 
         // Workaround to force proper location of startMinute's context menu. Otherwise, the first time it is clicked
@@ -58,10 +57,10 @@ public class AddEventController implements Initializable {
         startMinute.setId("time-choice");
         startHour.setId("time-choice");
 
-        endHour.getItems().addAll(Calendar.getStartHours());
+        endHour.getItems().addAll(Calendar.getEventHours());
         endHour.setValue("10");
 
-        endMinute.getItems().addAll(Calendar.getStartMinutes());
+        endMinute.getItems().addAll(Calendar.getEventMinutes());
         endMinute.setValue("00");
 
         // Workaround used again
@@ -91,24 +90,34 @@ public class AddEventController implements Initializable {
         });
 
         cancelButton.setOnAction(e -> {
-            window = (Stage)((Node) e.getSource()).getScene().getWindow();
-            window.close();
+            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+            stage.close();
         });
+
         addEventButton.setOnAction(e -> {
             eventDetails = new Object[7];
             eventDetails[0] = eventNameInput.getText();
-            eventDetails[1] = startHour.getValue() + ":" + startMinute.getValue();
+            eventDetails[1] = startHour.getValue();
+
+            if (!startMinute.getValue().equals("00"))
+                eventDetails[1] += ":" + startMinute.getValue();
+
             eventDetails[2] = startAmPm.getValue();
-            eventDetails[3] = endHour.getValue() + ":" + endMinute.getValue();
+            eventDetails[3] = endHour.getValue();
+
+            if (!endMinute.getValue().equals("00"))
+                eventDetails[3] += ":" + endMinute.getValue();
+
             eventDetails[4] = endAmPm.getValue();
             eventDetails[5] = COLOR_CHOICES.get(colorSelection.getValue());
 
             check.setValue(true);
 
-            window = (Stage)((Node) e.getSource()).getScene().getWindow();
-            window.close();
-
+            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+            stage.close();
         });
+
+        addEventButton.setDefaultButton(true);
 
     }
     public Object[] getEventDetails(){

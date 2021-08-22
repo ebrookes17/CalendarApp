@@ -1,5 +1,5 @@
 #main-anchorpane {
-    -fx-background-color: white;
+    -fx-background-color: #f7f7f7;
 }
 .menu-bar {
     -fx-background-color: #d4d4d4;
@@ -7,52 +7,59 @@
 ScrollPane {
     -fx-fit-to-height: true;
     -fx-fit-to-width: true;
-    -fx-background-color: white;
+    -fx-background-color: #f7f7f7;
     -fx-border-color: #d4d4d4;
 }
 VBox {
-    -fx-background-color: white;
+    -fx-background-color: #f7f7f7;
 }
-#weekday-header {
+#weekday-header, #weekend-header {
     -fx-background-color:  #d4d4d4;
 }
 #weekday-header Label {
-    -fx-text-fill: black;
-}
-#weekend-header {
-    -fx-background-color: #e6e6e6;
+    -fx-text-fill: #212121;
 }
 #weekend-header Label {
     -fx-text-fill: #525252;
 }
 #date Label {
-    -fx-text-fill: black;
+    -fx-text-fill: #212121;
 }
+#day-slot VBox Label {
+    -fx-text-fill: #212121;
+}
+#load-save-button {
+    -fx-background-color: #d4d4d4;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #212121;
+    -fx-label-padding: 2px 12px 2px 12px;
+}
+
 .menu {
     -fx-label-padding: 3px;
 }
 .menu .label, .menu-item .label {
-    -fx-text-fill: #ebebeb;
+    -fx-text-fill: #212121;
 }
 .menu:hover, .menu:pressed {
-    -fx-background-color: #2e2e2e;
+    -fx-background-color: #f7f7f7;
 }
 .menu-item:hover {
-    -fx-background-color: #2e2e2e;
+    -fx-background-color: #f7f7f7;
 }
 .context-menu {
-    -fx-background-color: #2e2e2e;
+    -fx-background-color: #f7f7f7;
     -fx-label-padding: 10px;
 }
 .menu-item:focused {
-    -fx-background-color : #363636;
+    -fx-background-color : #d4d4d4;
 }
 #event-label {
     -fx-font-size: 14px;
-    -fx-border-color: white;
+    -fx-border-color: #f7f7f7;
 }
 #name-label {
-    -fx-text-fill: white;
+    -fx-text-fill: #f7f7f7;
 }
 #time-label {
     -fx-text-fill: #ebebeb;
@@ -60,8 +67,8 @@ VBox {
 }
 
 .scroll-bar:vertical .track{
-    -fx-background-color : #2e2e2e;
-    -fx-border-color : #2e2e2e;
+    -fx-background-color : #f7f7f7;
+    -fx-border-color : #f7f7f7;
     -fx-background-radius : 0.0em;
     -fx-border-radius :2.0em;
 }
@@ -89,9 +96,9 @@ VBox {
 
 .scroll-bar:horizontal .thumb:hover,
 .scroll-bar:vertical .thumb:hover {
-    -fx-background-color :derive(#4D4C4F,10.0%);
-    -fx-background-insets : 1.0, 0.0, 0.0;
-    -fx-background-radius : 0.5em;
+    -fx-background-color: derive(#4D4C4F,10.0%);
+    -fx-background-insets: 1.0, 0.0, 0.0;
+    -fx-background-radius: 0.5em;
 }
 
 

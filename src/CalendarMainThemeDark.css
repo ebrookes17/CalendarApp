@@ -23,17 +23,26 @@ VBox {
     -fx-background-color: #363636;
 }
 #weekend-header Label {
-    -fx-text-fill: #d4d4d4;
+    -fx-text-fill: #bdbdbd;
 }
 #date Label {
-    -fx-text-fill: #ebebeb;
+    -fx-text-fill: #eeeeee;
+}
+#day-slot VBox Label {
+    -fx-text-fill: #eeeeee;
+}
+#load-save-button {
+    -fx-background-color: #363636;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-label-padding: 2px 12px 2px 12px;
 }
 
 .menu {
     -fx-label-padding: 3px;
 }
 .menu .label, .menu-item .label {
-    -fx-text-fill: #ebebeb;
+    -fx-text-fill: #eeeeee;
 }
 .menu:hover, .menu:pressed {
     -fx-background-color: #2e2e2e;
@@ -56,7 +65,7 @@ VBox {
     -fx-text-fill: white;
 }
 #time-label {
-    -fx-text-fill: #ebebeb;
+    -fx-text-fill: #eeeeee;
     -fx-font-weight: bold;
 }
 
@@ -90,9 +99,9 @@ VBox {
 
 .scroll-bar:horizontal .thumb:hover,
 .scroll-bar:vertical .thumb:hover {
-    -fx-background-color :derive(#4D4C4F,10.0%);
-    -fx-background-insets : 1.0, 0.0, 0.0;
-    -fx-background-radius : 0.5em;
+    -fx-background-color: derive(#4D4C4F,10.0%);
+    -fx-background-insets: 1.0, 0.0, 0.0;
+    -fx-background-radius: 0.5em;
 }
 
 

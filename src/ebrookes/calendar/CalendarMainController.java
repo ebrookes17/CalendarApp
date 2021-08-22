@@ -9,16 +9,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Side;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ContextMenu;
-import javafx.scene.control.Label;
-import javafx.scene.control.MenuItem;
+import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.text.TextAlignment;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.time.Month;
@@ -29,11 +30,12 @@ import java.util.*;
 public class CalendarMainController implements Initializable {
 
     private AddEventController addEventController;
+    private SaveCalendarController saveCalendarController;
     public static Stage stage;
 
     // Buttons
     @FXML
-    Button prevMonthButton, nextMonthButton, prevYearButton, nextYearButton;
+    Button prevMonthButton, nextMonthButton, prevYearButton, nextYearButton, saveButton, loadButton;
 
     // Labels
     @FXML
@@ -57,17 +59,38 @@ public class CalendarMainController implements Initializable {
             v30, v31, v32, v33, v34, v35, v36, v40, v41, v42, v43, v44, v45, v46, v50, v51, v52, v53, v54, v55, v56;
 
     @FXML
-    Button lightModeButton, darkModeButton;
+    CheckMenuItem darkModeToggle;
 
     Year viewingYear;
     Month viewingMonth;
+    int today;
     int eventIndex;
     List<Object[]> customEvents;
+
+    FileChooser fileChooser;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+        darkModeToggle.setOnAction(e -> {
+            Scene currentScene = nextMonthButton.getScene();
+
+                if (darkModeToggle.isSelected()) {
+                    currentScene.getStylesheets().removeAll("CalendarMainThemeLight.css");
+                    currentScene.getStylesheets().add("CalendarMainThemeDark.css");
+                }
+                else {
+                    currentScene.getStylesheets().removeAll("CalendarMainThemeDark.css");
+                    currentScene.getStylesheets().add("CalendarMainThemeLight.css");
+
+                }
+        });
+
         customEvents = new ArrayList<>();
+
+        fileChooser = new FileChooser();
+        fileChooser.setTitle("Load Calendar");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Calendar Files (*.sav)", "*.sav"));
 
         // Populate dayLabels array
         Label[] dayLabels = {
@@ -134,9 +157,7 @@ public class CalendarMainController implements Initializable {
                     }
                     b.setValue(false);
 
-
                 });
-
 
                 clearHolidays(holidayLabels);
                 addHolidays(dayLabels, holidayLabels);
@@ -151,21 +172,36 @@ public class CalendarMainController implements Initializable {
             }
         });
 
-
         addHolidays(dayLabels, holidayLabels);
         addCustomEvents(daySlots, dayLabels);
 
-        lightModeButton.setOnAction(e -> {
-            Scene scene = lightModeButton.getScene();
-            scene.getStylesheets().removeAll("CalendarMainThemeDark.css");
-            scene.getStylesheets().add("CalendarMainThemeLight.css");
+        saveButton.setOnAction(e -> {
+            saveCalendarController = openSaveCalendar();
+            Save.saveCustomEvents(customEvents, saveCalendarController.getFileName());
+        });
 
+        loadButton.setOnAction(e -> {
+
+            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+            fileChooser.setInitialDirectory(new File (System.getProperty("user.dir") + "\\Saves"));
+            File file = fileChooser.showOpenDialog(stage);
+
+            if (file != null) {
+                Save.loadCustomEvents(file.getPath());
+                List<Object[]> temp = new ArrayList<>(Save.getLoadedObjectsList());
+
+                clearCustomEventsFromCalendar(daySlots);
+
+                customEvents.clear();
+
+                customEvents.addAll(temp);
+                generateCustomEventsForMonth(daySlots, dayLabels);
+            }
         });
-        darkModeButton.setOnAction(e -> {
-            Scene scene = darkModeButton.getScene();
-            scene.getStylesheets().removeAll("CalendarMainThemeLight.css");
-            scene.getStylesheets().add("CalendarMainThemeDark.css");
-        });
+    }
+    private void highlightToday(Calendar calendar) {
+        today = calendar.getCurrentDay();
+
     }
 
     private void displayViewingYearAndMonth(Calendar calendar) {
@@ -324,6 +360,31 @@ public class CalendarMainController implements Initializable {
         return loader.getController();
     }
 
+    private SaveCalendarController openSaveCalendar() {
+        Stage stage = new Stage();
+        Parent root = null;
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SaveCalendar.fxml"));
+
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root, 400, 200);
+        stage.setScene(scene);
+
+        //scene.getStylesheets().add("");
+
+        stage.setTitle("Save Calendar");
+
+        // block interaction with other windows
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+
+        return loader.getController();
+    }
+
     private void createNewEvent(Object[] eventDetails, VBox[] daySlots, Label[] dayLabels) {
 
         HBox hBox = new HBox();
@@ -346,7 +407,7 @@ public class CalendarMainController implements Initializable {
         hBox.getChildren().addAll(timeLabel, region, nameLabel);
         hBox.setPadding(new Insets(1));
 
-        Object[] objects = new Object[6];
+        Object[] objects = new Object[7];
 
         objects[0] = viewingYear;
         objects[1] = viewingMonth;
@@ -354,6 +415,7 @@ public class CalendarMainController implements Initializable {
         objects[3] = eventIndex;
         objects[4] = hBox;
         objects[5] = dayLabels[eventIndex].isDisabled();
+        objects[6] = nameLabel.getText() + "/" + timeLabel.getText() + "/" + hBox.getStyle();
 
         daySlots[eventIndex].getChildren().add(hBox);
 
@@ -364,12 +426,6 @@ public class CalendarMainController implements Initializable {
 
         for (int i = 0; i < customEvents.size(); i++) {
 
-            System.out.println(
-            customEvents.get(i)[0] + "," +
-                    customEvents.get(i)[1] + "," +
-                    customEvents.get(i)[2] + "," +
-                    customEvents.get(i)[3] + "," );
-
             // Add event normally
             if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && viewingMonth == customEvents.get(i)[1]) {
                 daySlots[(int) customEvents.get(i)[3]].getChildren().add((HBox)customEvents.get(i)[4]);
@@ -377,30 +433,27 @@ public class CalendarMainController implements Initializable {
 
             //if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String)customEvents.get(i)[2]) < 15 && viewingMonth.minus(1) == customEvents.get(i)[1]) {
 
+            if ((boolean) customEvents.get(i)[5]) {
 
-
-            //if ((boolean) customEvents.get(i)[5]) {
-
-                System.out.println(customEvents.get(i)[2]);
                 // If day label is day in next month
-                if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String)customEvents.get(i)[2]) < 15 && viewingMonth.minus(1) == customEvents.get(i)[1]) {
+                if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String) customEvents.get(i)[2]) < 15 && viewingMonth.minus(1) == customEvents.get(i)[1]) {
 
                     for (int j = 0; j < 15; j++) {
-                        if (dayLabels[j].getText().equals((String)customEvents.get(i)[2]))
-                            daySlots[j].getChildren().add((HBox)customEvents.get(i)[4]);
+                        if (dayLabels[j].getText().equals((String) customEvents.get(i)[2]))
+                            daySlots[j].getChildren().add((HBox) customEvents.get(i)[4]);
                     }
 
                 }
                 // Else if day label is day in previous month
-                else if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String)customEvents.get(i)[2]) > 15 && viewingMonth.plus(1) == customEvents.get(i)[1]) {
+                else if (viewingYear.toString().equals(customEvents.get(i)[0].toString()) && Integer.parseInt((String) customEvents.get(i)[2]) > 15 && viewingMonth.plus(1) == customEvents.get(i)[1]) {
 
                     for (int j = dayLabels.length - 15; j < dayLabels.length; j++) {
-                        if (dayLabels[j].getText().equals((String)customEvents.get(i)[2]))
-                            daySlots[j].getChildren().add((HBox)customEvents.get(i)[4]);
+                        if (dayLabels[j].getText().equals((String) customEvents.get(i)[2]))
+                            daySlots[j].getChildren().add((HBox) customEvents.get(i)[4]);
                     }
 
                 }
-
+            }
             //}
             /* WIP - DEALING WITH EVENTS ADDED TO DAYS OUTSIDE OF CURRENT MONTH
             if (dayLabels[i].isDisabled()) {
@@ -421,7 +474,7 @@ public class CalendarMainController implements Initializable {
         }
     }
 
-    private void clearCustomEvents(VBox[] daySlots) {
+    private void clearCustomEventsFromCalendar(VBox[] daySlots) {
 
         for (int i = 0; i < daySlots.length; i++) {
 
@@ -432,7 +485,7 @@ public class CalendarMainController implements Initializable {
 
     private void generateCustomEventsForMonth(VBox[] dayslots, Label[] dayLabels) {
 
-        clearCustomEvents(dayslots);
+        clearCustomEventsFromCalendar(dayslots);
         addCustomEvents(dayslots, dayLabels);
     }
 

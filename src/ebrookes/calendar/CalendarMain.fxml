@@ -2,6 +2,7 @@
 
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -37,18 +38,9 @@
             <MenuItem mnemonicParsing="false" text="Quit" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
+        <Menu mnemonicParsing="false" text="Dark Mode">
           <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
+                  <CheckMenuItem fx:id="darkModeToggle" mnemonicParsing="false" selected="true" text="On" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
@@ -87,7 +79,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ScrollPane GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v00">
                                        <children>
@@ -112,7 +104,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v01">
                                        <children>
@@ -137,7 +129,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v02">
                                        <children>
@@ -162,7 +154,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v03">
                                        <children>
@@ -187,7 +179,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="4" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v04">
                                        <children>
@@ -212,7 +204,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="5" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v05">
                                        <children>
@@ -237,7 +229,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="1">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="6" GridPane.rowIndex="1">
                                  <content>
                                     <VBox fx:id="v06">
                                        <children>
@@ -262,7 +254,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v10">
                                        <children>
@@ -287,7 +279,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v11">
                                        <children>
@@ -312,7 +304,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v12">
                                        <children>
@@ -337,7 +329,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v13">
                                        <children>
@@ -362,7 +354,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="4" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v14">
                                        <children>
@@ -387,7 +379,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="5" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v15">
                                        <children>
@@ -412,7 +404,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="2">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="6" GridPane.rowIndex="2">
                                  <content>
                                     <VBox fx:id="v16">
                                        <children>
@@ -524,7 +516,7 @@
                                     </VBox>
                                  </children>
                               </VBox>
-                              <ScrollPane GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v20">
                                        <children>
@@ -549,7 +541,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v21">
                                        <children>
@@ -574,7 +566,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v22">
                                        <children>
@@ -599,7 +591,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v23">
                                        <children>
@@ -624,11 +616,11 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="4" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v24">
                                        <children>
-                                          <Label fx:id="d24" text="Label" textFill="#d4d4d4">
+                                          <Label fx:id="d24" text="Label" textFill="#ebebeb">
                                              <font>
                                                 <Font name="Segoe UI Bold" size="14.0" />
                                              </font>
@@ -649,7 +641,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="6" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v26">
                                        <children>
@@ -674,7 +666,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v30">
                                        <children>
@@ -699,7 +691,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v31">
                                        <children>
@@ -724,7 +716,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v32">
                                        <children>
@@ -749,7 +741,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v33">
                                        <children>
@@ -774,7 +766,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="4" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v34">
                                        <children>
@@ -799,7 +791,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="5" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v35">
                                        <children>
@@ -824,7 +816,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="4">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="6" GridPane.rowIndex="4">
                                  <content>
                                     <VBox fx:id="v36">
                                        <children>
@@ -849,7 +841,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v40">
                                        <children>
@@ -874,7 +866,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v41">
                                        <children>
@@ -899,7 +891,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v42">
                                        <children>
@@ -924,7 +916,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v43">
                                        <children>
@@ -949,7 +941,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="4" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v44">
                                        <children>
@@ -974,7 +966,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="5" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v45">
                                        <children>
@@ -999,7 +991,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="5">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="6" GridPane.rowIndex="5">
                                  <content>
                                     <VBox fx:id="v46">
                                        <children>
@@ -1024,7 +1016,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v50">
                                        <children>
@@ -1049,7 +1041,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v51">
                                        <children>
@@ -1074,7 +1066,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="2" GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v52">
                                        <children>
@@ -1099,7 +1091,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="3" GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v53">
                                        <children>
@@ -1124,7 +1116,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="4" GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="4" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v54">
                                        <children>
@@ -1149,7 +1141,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="5" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v55">
                                        <children>
@@ -1174,7 +1166,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="6" GridPane.rowIndex="6">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="6" GridPane.rowIndex="6">
                                  <content>
                                     <VBox fx:id="v56">
                                        <children>
@@ -1199,7 +1191,7 @@
                                     </VBox>
                                  </content>
                               </ScrollPane>
-                              <ScrollPane GridPane.columnIndex="5" GridPane.rowIndex="3">
+                              <ScrollPane id="day-slot" GridPane.columnIndex="5" GridPane.rowIndex="3">
                                  <content>
                                     <VBox fx:id="v25">
                                        <children>
@@ -1293,8 +1285,20 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <Button fx:id="lightModeButton" layoutX="99.0" layoutY="98.0" mnemonicParsing="false" text="Light Mode" />
-                        <Button fx:id="darkModeButton" layoutX="99.0" layoutY="132.0" mnemonicParsing="false" text="Dark Mode" />
+                        <Button id="load-save-button" fx:id="loadButton" layoutX="64.0" layoutY="98.0" mnemonicParsing="false" text="Load">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button id="load-save-button" fx:id="saveButton" layoutX="65.0" layoutY="49.0" mnemonicParsing="false" text="Save">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
                      </children>
                   </AnchorPane>
                </top>
