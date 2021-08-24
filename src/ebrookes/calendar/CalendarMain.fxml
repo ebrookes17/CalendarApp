@@ -98,9 +98,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -123,9 +120,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -148,9 +142,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -173,9 +164,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -198,9 +186,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -223,9 +208,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -248,9 +230,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -273,9 +252,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -298,9 +274,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -323,9 +296,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -348,9 +318,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -373,9 +340,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -398,9 +362,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -423,9 +384,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -535,9 +493,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -560,9 +515,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -585,9 +537,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -610,9 +559,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -635,9 +581,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -660,9 +603,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -685,9 +625,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -710,9 +647,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -735,9 +669,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -760,9 +691,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -785,9 +713,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -810,9 +735,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -835,9 +757,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -860,9 +779,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -885,9 +801,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -910,9 +823,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -935,9 +845,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -960,9 +867,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -985,9 +889,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1010,9 +911,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1035,9 +933,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1060,9 +955,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1085,9 +977,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1110,9 +999,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1135,9 +1021,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1160,9 +1043,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1185,9 +1065,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1210,9 +1087,6 @@
                                              </children>
                                           </HBox>
                                        </children>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
                                     </VBox>
                                  </content>
                               </ScrollPane>
@@ -1299,6 +1173,19 @@
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor></Button>
+                        <Button id="load-save-button" fx:id="addEventButton" layoutX="1287.0" layoutY="49.0" mnemonicParsing="false" text="Add Event">
+                           <font>
+                              <Font name="Segoe UI Bold" size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Label fx:id="addEventLabel" layoutX="1335.0" layoutY="80.0" text=" ">
+                           <font>
+                              <Font name="Segoe UI" size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </top>

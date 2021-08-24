@@ -3,7 +3,6 @@
 package ebrookes.calendar;
 
 import javafx.scene.control.Label;
-
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;

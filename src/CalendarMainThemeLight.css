@@ -28,13 +28,26 @@ VBox {
 #day-slot VBox Label {
     -fx-text-fill: #212121;
 }
+#day-slot HBox {
+    -fx-border-color: #2e2e2e;
+}
 #load-save-button {
     -fx-background-color: #d4d4d4;
     -fx-background-radius: 10px;
     -fx-text-fill: #212121;
     -fx-label-padding: 2px 12px 2px 12px;
 }
-
+#load-save-button:hover {
+    -fx-background-color: f7f7f7;
+}
+#today {
+    -fx-background-color: #d4d4d4;
+    -fx-border-color: black;
+}
+#tool-tip {
+    -fx-font-size: 14px;
+    -fx-background-color: black;
+}
 .menu {
     -fx-label-padding: 3px;
 }
@@ -59,10 +72,10 @@ VBox {
     -fx-border-color: #f7f7f7;
 }
 #name-label {
-    -fx-text-fill: #f7f7f7;
+    -fx-text-fill: white;
 }
 #time-label {
-    -fx-text-fill: #ebebeb;
+    -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 
@@ -100,5 +113,3 @@ VBox {
     -fx-background-insets: 1.0, 0.0, 0.0;
     -fx-background-radius: 0.5em;
 }
-
-

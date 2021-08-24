@@ -8,7 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.geometry.Point2D;
 import javafx.geometry.Side;
+import javafx.scene.Cursor;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,7 +20,6 @@ import javafx.scene.text.TextAlignment;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -35,13 +36,13 @@ public class CalendarMainController implements Initializable {
 
     // Buttons
     @FXML
-    Button prevMonthButton, nextMonthButton, prevYearButton, nextYearButton, saveButton, loadButton;
+    Button prevMonthButton, nextMonthButton, prevYearButton, nextYearButton, saveButton, loadButton,
+            addEventButton, deleteEventButton;
 
     // Labels
     @FXML
-    Label viewingMonthLabel;
-    @FXML
-    Label viewingYearLabel;
+    Label viewingMonthLabel, viewingYearLabel, addEventLabel;
+
 
     // Labels for days within day slots
     @FXML
@@ -64,6 +65,8 @@ public class CalendarMainController implements Initializable {
     Year viewingYear;
     Month viewingMonth;
     int today;
+    Month todayMonth;
+    Year todayYear;
     int eventIndex;
     List<Object[]> customEvents;
 
@@ -131,41 +134,43 @@ public class CalendarMainController implements Initializable {
         // Assign next year button functionality
         assignNextYearButtonFunc(calendar, dayLabels, holidayLabels, daySlots);
 
-        ContextMenu contextMenu = new ContextMenu();
-        MenuItem menuItem1 = new MenuItem("Add Event");
-        contextMenu.getItems().addAll(menuItem1);
+        BooleanProperty isEventReadyToCreate = new SimpleBooleanProperty(false);
 
-        BooleanProperty b = new SimpleBooleanProperty(false);
+        addEventButton.setOnAction(e -> {
+            stage = (Stage)((Node) e.getSource()).getScene().getWindow();
+            showTooltip(stage, addEventButton, "Click on a calendar day to continue");
 
-        for (int i = 0; i < daySlots.length; i++) {
-            int finalI = i;
-            daySlots[i].setOnMouseClicked(e -> {
+            for (int i = 0; i < daySlots.length; i++) {
+                int finalI = i;
 
-                eventIndex = finalI;
+                daySlots[finalI].setCursor(Cursor.HAND);
 
-                System.out.println(daySlots[finalI] + "clicked");
+                daySlots[i].setOnMouseClicked(e2 -> {
+                    eventIndex = finalI;
 
-                contextMenu.show(daySlots[finalI], Side.RIGHT, -100, 60);
-
-                menuItem1.setOnAction(ev -> {
+                    System.out.println(daySlots[finalI] + "clicked");
 
                     addEventController = openAddEvent();
 
                     if (addEventController.getEventDetails() != null) {
                         if (addEventController.getCheck().getValue())
-                            b.setValue(true);
+                            isEventReadyToCreate.setValue(true);
                     }
-                    b.setValue(false);
+                    isEventReadyToCreate.setValue(false);
 
+                    clearHolidays(holidayLabels);
+                    addHolidays(dayLabels, holidayLabels);
+
+                    for (int j = 0; j < daySlots.length; j++) {
+                        daySlots[j].setCursor(Cursor.DEFAULT);
+                        daySlots[j].setOnMouseClicked(e3 -> {
+                        });
+                    }
                 });
+            }
+        });
 
-                clearHolidays(holidayLabels);
-                addHolidays(dayLabels, holidayLabels);
-            });
-        }
-
-
-        b.addListener((observable, oldvalue, newvalue) -> {
+        isEventReadyToCreate.addListener((observable, oldvalue, newvalue) -> {
             if (newvalue) {
                 createNewEvent(addEventController.getEventDetails(), daySlots, dayLabels);
                 addEventController.setCheck(false);
@@ -183,7 +188,7 @@ public class CalendarMainController implements Initializable {
         loadButton.setOnAction(e -> {
 
             stage = (Stage)((Node) e.getSource()).getScene().getWindow();
-            fileChooser.setInitialDirectory(new File (System.getProperty("user.dir") + "\\Saves"));
+            fileChooser.setInitialDirectory(new File (System.getProperty("user.dir") + "\\Saved Calendars"));
             File file = fileChooser.showOpenDialog(stage);
 
             if (file != null) {
@@ -198,10 +203,32 @@ public class CalendarMainController implements Initializable {
                 generateCustomEventsForMonth(daySlots, dayLabels);
             }
         });
-    }
-    private void highlightToday(Calendar calendar) {
-        today = calendar.getCurrentDay();
 
+        highlightToday(calendar, daySlots, dayLabels);
+    }
+    private void getCurrentDate(Calendar calendar) {
+        today = calendar.getCurrentDay();
+        todayMonth = calendar.getCurrentMonth();
+        todayYear = calendar.getCurrentYear();
+    }
+
+    // TODO: ensure method doesn't add today twice
+    private void highlightToday(Calendar calendar, VBox[] daySlots, Label[] dayLabels) {
+        getCurrentDate(calendar);
+
+        for (int i=0; i < daySlots.length; i++) {
+            if (daySlots[i].getId().equals("today")) {
+                daySlots[i].setId("");
+                break;
+            }
+
+            if (viewingYear.toString().equals(calendar.getCurrentYear().toString())
+                    && viewingMonth == calendar.getCurrentMonth()
+                    && dayLabels[i].getText().equals(String.valueOf(today))) {
+                daySlots[i].setId("today");
+                break;
+            }
+        }
     }
 
     private void displayViewingYearAndMonth(Calendar calendar) {
@@ -225,6 +252,8 @@ public class CalendarMainController implements Initializable {
             generateHolidaysForMonth(dayLabels, holidayLabels);
 
             generateCustomEventsForMonth(daySlots, dayLabels);
+
+            highlightToday(calendar, daySlots, dayLabels);
         });
     }
 
@@ -241,6 +270,8 @@ public class CalendarMainController implements Initializable {
             generateHolidaysForMonth(dayLabels, holidayLabels);
 
             generateCustomEventsForMonth(daySlots, dayLabels);
+
+            highlightToday(calendar, daySlots, dayLabels);
         });
     }
 
@@ -255,6 +286,8 @@ public class CalendarMainController implements Initializable {
             generateHolidaysForMonth(dayLabels, holidayLabels);
 
             generateCustomEventsForMonth(daySlots, dayLabels);
+
+            highlightToday(calendar, daySlots, dayLabels);
         });
     }
 
@@ -269,6 +302,8 @@ public class CalendarMainController implements Initializable {
             generateHolidaysForMonth(dayLabels, holidayLabels);
 
             generateCustomEventsForMonth(daySlots, dayLabels);
+
+            highlightToday(calendar, daySlots, dayLabels);
         });
     }
 
@@ -278,6 +313,7 @@ public class CalendarMainController implements Initializable {
         addHolidays(dayLabels, holidayLabels);
     }
 
+    // TODO: add rest of holidays
     private void addHolidays(Label[] dayLabels, Label[] holidayLabels) {
 
         for (int i = 0; i < dayLabels.length; i++) {
@@ -330,7 +366,6 @@ public class CalendarMainController implements Initializable {
             if (!holidayLabels[i].getText().equals("")) {
                 holidayLabels[i].setText("");
                 holidayLabels[i].getParent().setVisible(false);
-
             }
         }
 
@@ -389,8 +424,8 @@ public class CalendarMainController implements Initializable {
 
         HBox hBox = new HBox();
 
-        Label nameLabel = new Label(eventDetails[0].toString());
-        Label timeLabel = new Label((String) eventDetails[1] + eventDetails [2] + " - " +
+        Label nameLabel = new Label(eventDetails[0].toString() + " ");
+        Label timeLabel = new Label(" " + eventDetails[1] + eventDetails [2] + " - " +
                 eventDetails[3] + eventDetails [4]);
 
         nameLabel.setId("name-label");
@@ -406,6 +441,7 @@ public class CalendarMainController implements Initializable {
 
         hBox.getChildren().addAll(timeLabel, region, nameLabel);
         hBox.setPadding(new Insets(1));
+        hBox.setCursor(Cursor.HAND);
 
         Object[] objects = new Object[7];
 
@@ -419,9 +455,27 @@ public class CalendarMainController implements Initializable {
 
         daySlots[eventIndex].getChildren().add(hBox);
 
+        ContextMenu contextMenu = new ContextMenu();
+        MenuItem menuItem = new MenuItem("Delete Event");
+        contextMenu.getItems().add(menuItem);
+
+        hBox.setOnMouseClicked(e -> {
+
+            contextMenu.show(daySlots[eventIndex], Side.RIGHT, -100, 90);
+
+            menuItem.setOnAction(ev -> {
+                deleteEvent(hBox, daySlots, eventIndex);
+            });
+        });
+
         customEvents.add(objects);
 
     }
+    //TODO: fix delete event method
+    private void deleteEvent(HBox hBox, VBox[] daySlots, int eventIndex) {
+        daySlots[eventIndex].getChildren().remove(hBox);
+    }
+
     private void addCustomEvents(VBox[] daySlots, Label[] dayLabels) {
 
         for (int i = 0; i < customEvents.size(); i++) {
@@ -455,7 +509,7 @@ public class CalendarMainController implements Initializable {
                 }
             }
             //}
-            /* WIP - DEALING WITH EVENTS ADDED TO DAYS OUTSIDE OF CURRENT MONTH
+            /* TODO: DEALING WITH EVENTS ADDED TO DAYS OUTSIDE OF CURRENT MONTH
             if (dayLabels[i].isDisabled()) {
 
                 // If day label is day in next month
@@ -487,6 +541,22 @@ public class CalendarMainController implements Initializable {
 
         clearCustomEventsFromCalendar(dayslots);
         addCustomEvents(dayslots, dayLabels);
+    }
+    public static void showTooltip(Stage owner, Control control, String tooltipText)
+    {
+        Point2D p = control.localToScene(0.0, 0.0);
+
+        final Tooltip customTooltip = new Tooltip();
+        customTooltip.setId("tool-tip");
+        customTooltip.setText(tooltipText);
+
+        control.setTooltip(customTooltip);
+        customTooltip.setAutoHide(true);
+
+        customTooltip.show(owner,
+                p.getX() + control.getScene().getX() + control.getScene().getWindow().getX() - 50,
+                p.getY() + control.getScene().getY() + control.getScene().getWindow().getY());
+
     }
 
 }

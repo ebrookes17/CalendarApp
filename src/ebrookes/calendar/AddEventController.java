@@ -10,7 +10,6 @@ import javafx.scene.control.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;

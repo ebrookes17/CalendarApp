@@ -6,7 +6,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.text.TextAlignment;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -27,7 +26,8 @@ public class Save {
             objectsToSaveList.get(i)[4] = null;
 
         try{
-            FileOutputStream saveFile = new FileOutputStream(System.getProperty("user.dir") + "\\Saves\\" + fileName + ".sav");
+            FileOutputStream saveFile = new FileOutputStream(System.getProperty("user.dir") +
+                    "\\Saved Calendars\\" + fileName + ".sav");
 
             // Create an ObjectOutputStream to put objects into save file.
             ObjectOutputStream save = new ObjectOutputStream(saveFile);

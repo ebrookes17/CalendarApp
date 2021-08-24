@@ -11,14 +11,19 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0">
          <children>
-            <TextField fx:id="fileNameInput" layoutX="126.0" layoutY="65.0" />
-            <Label layoutX="73.0" layoutY="68.0" text="Name:   ">
+            <TextField fx:id="fileNameInput" layoutX="126.0" layoutY="60.0" />
+            <Label layoutX="73.0" layoutY="63.0" text="Name:   ">
                <font>
                   <Font name="Segoe UI Semibold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="saveCalendarButton" layoutX="194.0" layoutY="130.0" mnemonicParsing="false" text="Save Calendar" />
-            <Button fx:id="cancelButton" layoutX="116.0" layoutY="130.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="saveCalendarButton" layoutX="194.0" layoutY="126.0" mnemonicParsing="false" text="Save Calendar" />
+            <Button fx:id="cancelButton" layoutX="116.0" layoutY="126.0" mnemonicParsing="false" text="Cancel" />
+            <Label fx:id="errorLabel" alignment="CENTER" layoutX="126.0" layoutY="83.0" prefHeight="20.0" prefWidth="149.0" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="125.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

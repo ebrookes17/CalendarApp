@@ -4,9 +4,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -18,7 +19,8 @@ public class SaveCalendarController implements Initializable {
 
     @FXML
     TextField fileNameInput;
-
+    @FXML
+    Label errorLabel;
     @FXML
     Button saveCalendarButton, cancelButton;
 
@@ -31,13 +33,21 @@ public class SaveCalendarController implements Initializable {
         });
 
         saveCalendarButton.setOnAction(e -> {
-            if (!fileNameInput.getText().equals("")) {
-                fileName = fileNameInput.getText();
-                stage = (Stage)((Node) e.getSource()).getScene().getWindow();
-                stage.close();
+
+            try {
+                if (fileNameInput.getText().equals("") || fileNameInput.getText().contains(" ")) {
+                    throw new FileNotFoundException("Invalid file name");
+
+                } else {
+                    fileName = fileNameInput.getText();
+                    stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+                    stage.close();
+                }
+
             }
-            else
-                System.out.println("Could not save: invalid text");
+            catch (FileNotFoundException exception) {
+                errorLabel.setText(exception.getMessage());
+            }
         });
     }
 

@@ -13,14 +13,11 @@ ScrollPane {
 VBox {
     -fx-background-color: #2e2e2e;
 }
-#weekday-header {
+#weekday-header, #weekend-header {
     -fx-background-color:  #363636;
 }
 #weekday-header Label {
     -fx-text-fill: white;
-}
-#weekend-header {
-    -fx-background-color: #363636;
 }
 #weekend-header Label {
     -fx-text-fill: #bdbdbd;
@@ -31,13 +28,26 @@ VBox {
 #day-slot VBox Label {
     -fx-text-fill: #eeeeee;
 }
+#day-slot HBox {
+    -fx-border-color: #2e2e2e;
+}
 #load-save-button {
     -fx-background-color: #363636;
     -fx-background-radius: 10px;
     -fx-text-fill: white;
     -fx-label-padding: 2px 12px 2px 12px;
 }
-
+#load-save-button:hover {
+    -fx-background-color: #2e2e2e;
+}
+#today {
+    -fx-background-color: #363636;
+    -fx-border-color: white;
+}
+#tool-tip {
+    -fx-font-size: 14px;
+    -fx-background-color: black;
+}
 .menu {
     -fx-label-padding: 3px;
 }
@@ -65,7 +75,7 @@ VBox {
     -fx-text-fill: white;
 }
 #time-label {
-    -fx-text-fill: #eeeeee;
+    -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 
@@ -103,5 +113,3 @@ VBox {
     -fx-background-insets: 1.0, 0.0, 0.0;
     -fx-background-radius: 0.5em;
 }
-
-
